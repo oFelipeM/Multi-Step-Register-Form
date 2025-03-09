@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi step Register Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="96x96" />
+</head>
+
+<body>
+
+
+    <div class="form-container">
+
+        <form action="" id="registerForm">
+            <h1>Register</h1>
+            <label for="userName">Name</label>
+            <input type="text" id="userName" placeholder="Enter your name" class="campos" required><br>
+            <label for="userEmail">Email</label>
+            <input type="email" id="userEmail" placeholder="Example@gmail.com" class="campos" required><br>
+            <button type="submit" id="btn1">Continue</button>
+        </form>
+
+
+        <form action="" style="display: none;" id="optionsForm">
+            <h1 id="greetings">Which topic are you interested in?</h1> <br>
+            <input type="radio" id="firstOption" name="topic" value="Software Development" class="radio-button"
+                required>
+            <label for="firstOption" class="menu-option">Software Development</label><br>
+            <input type="radio" id="secondOption" name="topic" value="User Experience" class="radio-button">
+            <label for="secondOption" class="menu-option">User Experience</label><br>
+            <input type="radio" id="thirdOption" name="topic" value="Graphic Design" class="radio-button">
+            <label for="thirdOption" class="menu-option" required>Graphic Design</label><br>
+            <button type="submit">Continue</button>
+        </form>
+
+        <div style="display: none;" id="divLastPart">
+            <h1 class="resultsColor">Your Summary</h1>
+            <h3 id="nameResult">Name</h3>
+            <h3 id="emailResult">Email</h3>
+            <h2 class="resultsColor">Topic</h2>
+            <h3 id="topicResult">Topic</h3>
+        </div>
+
+        <div style="display: none;">
+            <input type="radio" id="firstStep" disabled>
+            <input type="radio" id="secondStep" disabled>
+            <input type="radio" id="thirdStep" disabled>
+        </div>
+
+    </div>
+
+
+    <div class="progress-container">
+
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="step active"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+
+    </div>
+    <h3 class="small-text" id="stepsText">Step 1 of 3</h3>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
